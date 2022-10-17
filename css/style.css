@@ -1,5 +1,5 @@
 /* Default View */
-/* Q1 */
+/* Q1 - create the animation and set the start/end details */
 @keyframes logokeyframe {
     0% {
         opacity: 0;
@@ -12,36 +12,37 @@
     }
 }
 
+/* now apply the animation to the logo element, linear speed no delay, 1 repetition */
 #logo {
     animation: logokeyframe 5s linear 0s 1 normal;
 }
 
-/* Q2 */
+/* Q2 - body font, background image, and color is set */
 body {
     font-family: 'Poppins', 'serif';
     background-image: url(../images/concrete_seamless.png);
     background-color: #f1f1f1;
 }
 
-/* Q3 */
+/* Q3 - style the header as shown in the spec */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Q4 */
+/* Q4 - change the nav links to flex */
 .nav_links {
     display: flex;
     flex-direction: column;
 }
 
-/* Q5 */
+/* Q5 - use psuedoclass to change the color to purple if visited  */
 .nav_links li a:visited {
     color: #A020F0;
 }
 
-/* Q6 */
+/* Q6 - card headers should be the green color with a border set */
 .card > header {
     background-color: #288088;
     border: solid #45ADAD 2px;
@@ -49,14 +50,14 @@ header {
     border-radius: 50px 50px 0px 0px;
 }
 
-/* Q7 */
+/* Q7 - flex basis needs to be changed, second selector to ensure border radius is correct as well */
 .card {
     flex-basis: 450px; 
-    /* from Q6 to match the spec */
+    /* from Q6 to match the spec - bottom corners should not be rounded, while top corners should not be visible from the card itself */
     border-radius:  50px 50px 0px 0px;
 }
 
-/* Q8 */
+/* Q8  - change pricing */
 .pricing {
     display: flex;
     flex-direction: row;
@@ -65,14 +66,14 @@ header {
     align-items: center;
 }
 
-/* Q9 */
+/* Q9 - change gallery, set width margin and border */
 .gallery img {
     width: 300px;
     border: solid #50C7C7 10px;
     margin: 10px;
 }
 
-/* Q10 */
+/* Q10 - use flex and wrap */
 .gallery {
     display: flex;
     flex-direction: row;
@@ -95,7 +96,7 @@ header {
         flex-basis: 275px;
     }
 
-    /* Q13 */
+    /* Q13 - make sure menu bar scrolls down with user */
     body > header {
         position: sticky;
         top: 0px;
@@ -105,13 +106,13 @@ header {
 /* Reduced motion preferred users */
 @media screen and (prefers-reduced-motion: reduce)
 {
-    /* Q14 */
+    /* Q14 - get rid of animation! */
     .logo {
         animation: none;
     }   
 }
 
-/* Print view */
+/* Print view - get rid of background image and change dont */
 @media print {
     body {
         /* Q15 */
@@ -138,18 +139,18 @@ header {
         align-items: flex-end;
     }
 
-    /* Q19 */
+    /* Q19 - change card */
     .card {
         flex-basis: 325px;
         border: solid #45ADAD 2px;
     }
 
-    /* Q20 */
+    /* Q20 - get rid of gallery ! */
     .gallery {
         display: none;
     }
 
-    /* Q21 */
+    /* Q21 - add thumbs up after the second list item of each pricing element */
     .pricing li:nth-child(2)::after {
         content: "👍🏿";
     }
