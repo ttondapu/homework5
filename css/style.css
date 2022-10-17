@@ -45,7 +45,7 @@ header {
 /* Q6 - card headers should be the green color with a border set */
 .card > header {
     background-color: #288088;
-    border: solid #45ADAD 2px;
+    border: solid #45ADD 2px;
     padding: 20px 0px 20px 0px;
     border-radius: 50px 50px 0px 0px;
 }
@@ -104,8 +104,7 @@ header {
 }
 
 /* Reduced motion preferred users */
-@media screen and (prefers-reduced-motion: reduce)
-{
+@media screen and (prefers-reduced-motion: reduce) {
     /* Q14 - get rid of animation! */
     .logo {
         animation: none;
