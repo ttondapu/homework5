@@ -141,7 +141,7 @@ header {
     /* Q19 - change card */
     .card {
         flex-basis: 325px;
-        border: solid #45ADAD 2px;
+        border: solid #45ADDD 2px;
     }
 
     /* Q20 - get rid of gallery ! */
