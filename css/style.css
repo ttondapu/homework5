@@ -1,0 +1,157 @@
+/* Default View */
+/* Q1 */
+@keyframes logokeyframe {
+    0% {
+        opacity: 0;
+        width: 25px;
+    }
+
+    100% {
+        opacity: 1;
+        width: 475px;
+    }
+}
+
+#logo {
+    animation: logokeyframe 5s linear 0s 1 normal;
+}
+
+/* Q2 */
+body {
+    font-family: 'Poppins', 'serif';
+    background-image: url(../images/concrete_seamless.png);
+    background-color: #f1f1f1;
+}
+
+/* Q3 */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Q4 */
+.nav_links {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Q5 */
+.nav_links li a:visited {
+    color: #A020F0;
+}
+
+/* Q6 */
+.card > header {
+    background-color: #288088;
+    border: solid #45ADAD 2px;
+    padding: 20px 0px 20px 0px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+/* Q7 */
+.card {
+    flex-basis: 450px; 
+    /* from Q6 to match the spec */
+    border-radius:  50px 50px 0px 0px;
+}
+
+/* Q8 */
+.pricing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Q9 */
+.gallery img {
+    width: 300px;
+    border: solid #50C7C7 10px;
+    margin: 10px;
+}
+
+/* Q10 */
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Greater than 900px */
+@media screen and (min-width: 900px) {
+    /* Q11 */
+    header, .nav_links {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Q12 */
+    .pricing, .card {
+        flex-basis: 275px;
+    }
+
+    /* Q13 */
+    body > header {
+        position: sticky;
+        top: 0px;
+    }
+}
+
+/* Reduced motion preferred users */
+@media screen and (prefers-reduced-motion: reduce)
+{
+    /* Q14 */
+    .logo {
+        animation: none;
+    }   
+}
+
+/* Print view */
+@media print {
+    body {
+        /* Q15 */
+        font-family: Arial, Helvetica;
+        /* Q16 */
+        background-image: none;
+    }
+
+    /* Q17 */
+    nav {
+        /* take up the whole space in print view */
+        width: 100%;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /* Q18 */
+    .pricing {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+
+    /* Q19 */
+    .card {
+        flex-basis: 325px;
+        border: solid #45ADAD 2px;
+    }
+
+    /* Q20 */
+    .gallery {
+        display: none;
+    }
+
+    /* Q21 */
+    .pricing li:nth-child(2)::after {
+        content: "👍🏿";
+    }
+}
+
